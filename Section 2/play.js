@@ -4,6 +4,10 @@
 const summarizeUser = (...args) => `Name is ${args[0]}, Age is ${args[1]} and the user has hobbies ${args[2]}`;
 console.log(summarizeUser("Deric", 23, true ));
 
+const sum = (a,b) +> a + b;
+const addOne = (a) => a + 1;
+
+console.log(sum(2,3));
 
 
 // // normal function
