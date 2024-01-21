@@ -21,3 +21,5 @@ newHobbies = hobbies.map( hobby => {
 });
 
 console.log(newHobbies);
+
+const copiedArray = [...hobbies]
