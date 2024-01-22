@@ -1,25 +1,40 @@
 const person = {
-    name: "Deric",
-    age: 23,
-    hasHobbies: true,
-    greet() { 
-    console.log(`Hello ${this.name} `)
-    },
-};
+    name: 'Max',
+    age: 29,
+    greet() {
+      console.log('Hi, I am ' + this.name);
+    }
+  };
+  
 
-
-person.greet();
-
-const hobbies = ["Sports", "Cooking"];
-
-for ( let hobby of hobbies) {
-    console.log(hobby);
+const printName = ({age}) => {
+    console.log(age)
 }
 
-newHobbies = hobbies.map( hobby => {
-    return 'Hobby' + hobby;
-});
+printName(person)
 
-console.log(newHobbies);
+const {name, age} = person;
+console.log(name, age)
 
-const copiedArray = [...hobbies]
+  const copiedPerson = { ...person };
+  console.log(copiedPerson);
+  
+  const hobbies = ['Sports', 'Cooking'];
+
+  const [hobby1, hobby2] = hobbies;
+
+  console.log(hobby1);
+  // for (let hobby of hobbies) {
+  //     console.log(hobby);
+  // }
+  // console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
+  // console.log(hobbies);
+  const copiedArray = [...hobbies];
+  console.log(copiedArray);
+  
+  const toArray = (...args) => {
+    return args;
+  };
+  
+  console.log(toArray(1, 2, 3, 4));
+  
