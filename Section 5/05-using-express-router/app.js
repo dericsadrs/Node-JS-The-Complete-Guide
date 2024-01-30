@@ -1,14 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+// import packages
+const express =  require('express');
+const bodyPaser = require('body-parser');
+const adminRoute = require('./routes/admin');
+const shopRoute = require('./routes/shop');
+
+
 
 const app = express();
 
-const adminRoutes = require('./routes/admin');
-const shopRoutes = require('./routes/shop');
+app.use(bodyPaser.urlencoded({extended: false}));
+app.use(adminRoute);
+app.use(shopRoute);
 
-app.use(bodyParser.urlencoded({extended: false}));
-
-app.use(adminRoutes);
-app.use(shopRoutes);
-
-app.listen(3000);
+app.listen(3000)
