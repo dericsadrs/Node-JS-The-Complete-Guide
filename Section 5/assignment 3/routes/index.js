@@ -5,6 +5,13 @@ const router = express.Router();
 
 router.get('/',(req, res, next)=>{
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
+
+    console.log(path.join(__dirname, '..', 'views', 'index.html'));
+})
+
+
+router.get('/users',(req, res, next) => {
+    res.sendFile(path.resolve(__dirname, '..', 'views', 'users.html'));
 })
 
 module.exports = router;
